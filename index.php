@@ -6,74 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-
-    <style>
-    .swiper {
-        padding-top:50px;
-    }
-
-    .swiper-pagination-bullet {
-        background-color: #bea474;
-        height: 16px;
-        width: 16px;
-        margin: 0 12px !important;
-    }
-
-        /* 前へ次への矢印カスタマイズ */
-    .swiper-button-prev,
-    .swiper-button-next {
-        height: 50px;
-        width: 150px;
-    }
-    /* 前へ次への矢印カスタマイズ */
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        height: 50px;
-        margin: auto;
-        width: 50px;
-    }
-    /* 前への矢印カスタマイズ */
-    .swiper-button-prev::after {
-        background-image: url(./img/slide-btn-prev.svg);
-    }
-    /* 次への矢印カスタマイズ */
-    .swiper-button-next::after {
-        background-image: url(./img/slide-btn-next.svg);
-    }
-    /* 画像サイズ調整 */
-    .swiper-slide img {
-        height: auto;
-        width: 100%;
-    }
-
-    @media screen and (max-width: 850px){
-        .swiper-button-prev,
-        .swiper-button-next {
-            height: 50px;
-            width: 50px;
-        }
-    }
-
-    @media screen and (max-width: 550px){
-        .swiper-button-prev,
-        .swiper-button-next {
-            height: 50px;
-            width: 50px;
-        }
-    }
-
-    @media screen and (max-width: 450px){
-        .swiper-button-prev,
-        .swiper-button-next {
-            height: 50px;
-            width: 50px;
-        }
-    }
-
-    </style>
 </head>
 <body>
     <?php include(dirname(__FILE__) . "/header.php"); ?>
@@ -152,34 +84,10 @@
 
     <?php include(dirname(__FILE__) . "/footer.php"); ?>
 
-
-
-  <!-- Swiper JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./js/index.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-    slidesPerView:1.2,//画像を何枚表示するか
-    spaceBetween: 10,//何ピクセル画像の間隔をあけるか
-    centeredSlides : true,//見切らせたい場合メイン画像をセンターにもってくるか
-    loop: true,//最後の画像までいったらループする
-    //ページネーションをつける場合
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-    },
-    //左右のナビゲーションをつける場合
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    }
-});
-  </script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

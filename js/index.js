@@ -13,6 +13,26 @@ $(function(){
 });
 
 $(function(){
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView:1.2,//画像を何枚表示するか
+    spaceBetween: 10,//何ピクセル画像の間隔をあけるか
+    centeredSlides : true,//見切らせたい場合メイン画像をセンターにもってくるか
+    loop: true,//最後の画像までいったらループする
+    //ページネーションをつける場合
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    //左右のナビゲーションをつける場合
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+  });
+});
+
+$(function(){
   $(".schedule_list").click(function(){
     let id = $(this).attr("id");                    //クリックした要素のidを取得する
 
